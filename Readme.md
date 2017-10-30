@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Kostin Maksim](https://up.htmlacademy.ru/htmlcss/19/user/219528).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Фомин] (https://htmlacademy.ru/profile/id44744).
 
 ---
 
