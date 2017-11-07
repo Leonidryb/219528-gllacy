@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Магазин "Глейси"</title>
+		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<header class="main-header">
@@ -25,16 +26,20 @@
 					<li><a href="info.html">О компании</a></li>
 				</ul>
 				<ul class="user-navigation">
-					<li class="user-search">Поиск</li>
-					<li class="user-login">Вход</li>
+					<li class="user-search">
+						Поиск
+						<div class="modal search-form">
+							<!-- Здесь будет форма поиска -->
+						</div>
+					</li>
+					<li class="user-login">
+						Вход
+						<div class="modal login-form">
+							<!-- Здесь будет форма входа -->
+						</div>
+					</li>
 					<li class="user-basket">Корзина</li>
 				</ul>
-				<div class="modal search-form">
-					<!-- Здесь будет форма поиска -->
-				</div>
-				<div class="modal login-form">
-					<!-- Здесь будет форма входа -->
-				</div>
 				<section class="short-contacts">
 					<span class="working-hours">С 10 до 20, ежедневно</span>
 					<span class="short-contacts-phone">8 812 450-25-25</span>
