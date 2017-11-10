@@ -28,23 +28,53 @@
 				<ul class="user-navigation">
 					<li class="user-search">
 						Поиск
-						<div class="modal search-form">
-							<!-- Здесь будет форма поиска -->
+						<div class="modal search">
+							<form class="search-form" method="get">
+								<label class="visually-hidden" for="search-form">Поиск</label>
+								<input id="search-form" type="search" name="search" placeholder="Что ищем?">
+							</form>
 						</div>
 					</li>
 					<li class="user-login">
 						Вход
-						<div class="modal login-form">
-							<!-- Здесь будет форма входа -->
+						<div class="modal login">
+							<form class="login-form" method="post">
+								<label class="visually-hidden" for="user-mail">Почта</label>
+								<input id="user-mail" type="email" name="email" placeholder="Электронная почта" required>
+								<label class="visually-hidden" for="user-password">Пароль</label>
+								<input id="user-password" type="password" name="password" placeholder="Пароль" required>
+								<button class="button" type="submit">Войти</button>
+								<a class="restore" href="#">Забыли пароль?</a>
+								<a class="registration" href="#">Новая регистрация</a>
+							</form>
 						</div>
 					</li>
 					<li class="user-basket">
 						Корзина
-						<div class="modal basket-form">
-							<!-- Здесь будет корзина -->
+						<div class="modal basket">
+							<table class="basket-table">
+								<tr>
+									<td><button class="product-delete" type="button">Закрыть</button></td>
+									<td>Пломбир с апельсиновым джемом</td>
+									<td><span>1,5 кг х</span><span>200 руб.</span></td>
+									<td>300 руб.</td>
+								</tr>
+								<tr>
+									<td><button class="product-delete" type="button">Закрыть</button></td>
+									<td>Клубничный пломбир с присыпкой из белого шоколада</td>
+									<td><span>1,5 кг х</span><span>300 руб.</span></td>
+									<td>450 руб.</td>
+								</tr>
+								<tr>
+									<td colspan="4">
+										<span>Итого: 750 руб.</span>
+									</td>
+								</tr>
+							</table>
+							<a class="button issue-order" href="#">Оформить заказ</a>
 						</div>
 					</li>
-				</ul>	
+				</ul>
 				<section class="short-contacts">
 					<span class="working-hours">С 10 до 20, ежедневно</span>
 					<span class="short-contacts-phone">8 812 450-25-25</span>
@@ -60,7 +90,71 @@
 			<h1 class="page-title">Сливочное мороженое</h1>
 			<section class="filters">
 				<h2 class="visually-hidden">Фильтр товаров</h2>
-				<!-- Здесь будет форма фильтров -->
+				<form class="filters-form" method="get">
+					<fieldset>
+						<legend>Сортировка:</legend>
+						<label class="visually-hidden" for="sorting-type">Тип сортировки</label>
+						<select name="sorting-type" id="sorting-type">
+							<option>по популярности</option>
+							<option>сначала недорогие</option>
+							<option>сначала дорогие</option>
+							<option>по жирности</option>
+						</select>
+					</fieldset>
+					<fieldset>
+						<legend>Диапазон цен:</legend>
+						<label for="price-range">Цена: 100 руб. - 500 руб.</label>
+						<div class="price-range" id="price-range">
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Жирность:</legend>
+						<ul>
+							<li class="fat-content-option">
+								<input class="visually-hidden" id="fat-content-0" type="radio" name="fat-content-value" value="0">
+								<label for="fat-content-0">0%</label>
+							</li>
+							<li class="fat-content-option">
+								<input class="visually-hidden" id="fat-content-to-10" type="radio" name="fat-content-value" value="<10" checked>
+								<label for="fat-content-to-10">до 10%</label>
+							</li>
+							<li class="fat-content-option">
+								<input class="visually-hidden" id="fat-content-to-30" type="radio" name="fat-content-value" value="<30">
+								<label for="fat-content-to-30">до 30%</label>
+							</li>
+							<li class="fat-content-option">
+								<input class="visually-hidden" id="fat-content-more-then-30" type="radio" name="fat-content-value" value=">30">
+								<label for="fat-content-more-then-30">выше 30%</label>
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset>
+						<legend>Наполнители:</legend>
+						<ul>
+							<li class="fillers-option">
+								<input class="visually-hidden" id="filler-chocolate" type="checkbox" name="filler-chocolate" checked>
+								<label for="filler-chocolate">Шоколадные</label>
+							</li>
+							<li class="fillers-option">
+								<input class="visually-hidden" id="filler-sugar" type="checkbox" name="filler-sugar" checked>
+								<label for="filler-sugar">Сахарные присыпки</label>
+							</li>
+							<li class="fillers-option">
+								<input class="visually-hidden" id="filler-fruit" type="checkbox" name="filler-fruit">
+								<label for="filler-fruit">Фрукты</label>
+							</li>
+							<li class="fillers-option">
+								<input class="visually-hidden" id="filler-syrup" type="checkbox" name="filler-syrup">
+								<label for="filler-syrup">Сиропы</label>
+							</li>
+							<li class="fillers-option">
+								<input class="visually-hidden" id="filler-jam" type="checkbox" name="filler-jam">
+								<label for="filler-jam">Джемы</label>
+							</li>
+						</ul>
+					</fieldset>
+					<button class="filter-button button" type="submit">Применить</button>
+				</form>
 			</section>
 			<section class="catalog">
 				<h2 class="visually-hidden">Список сливочного мороженого</h2>
@@ -189,9 +283,9 @@
 			<div class="footer-social">
 				<ul class="footer-social-list">
 					<li class="social button"><a href="#" aria-label="Твиттер"></a></li>
-					<li class="social button" aria-label="Инстаграм"><a href="#"></a></li>
-					<li class="social button" aria-label="Фэйсбук"><a href="#"></a></li>
-					<li class="social button" aria-label="Вконтакте"><a href="#"></a></li>
+					<li class="social button"><a href="#" aria-label="Инстаграм"></a></li>
+					<li class="social button"><a href="#" aria-label="Фэйсбук"></a></li>
+					<li class="social button"><a href="#" aria-label="Вконтакте"></a></li>
 				</ul>
 			</div>
 			<div class="suppliers-navigation">

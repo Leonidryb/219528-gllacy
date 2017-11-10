@@ -27,14 +27,15 @@
 				</ul>
 				<ul class="user-navigation">
 					<li class="user-search">
-						<div class="modal search">
+						Поиск
+						<div class="modal search" tabindex="0">
 							<form class="search-form" method="get">
 								<label class="visually-hidden" for="search-form">Поиск</label>
 								<input id="search-form" type="search" name="search" placeholder="Что ищем?">
 							</form>
 						</div>
 					</li>
-					<li class="user-login">
+					<li class="user-login" tabindex="0">
 						Вход
 						<div class="modal login">
 							<form class="login-form" method="post">
@@ -48,7 +49,7 @@
 							</form>
 						</div>
 					</li>
-					<li class="user-basket">Пусто</li>
+					<li class="user-basket" tabindex="0">Пусто</li>
 				</ul>
 				<section class="short-contacts">
 					<h2 class="visually-hidden">Время работы и телефон</h2>
@@ -197,7 +198,7 @@
 			</section>
 			<section class="main-contacts">
 				<h2 class="visually-hidden">Наши контакты</h2>
-				<p class="address">
+				<p class="main-contacts-address">
 					Адрес главного офиса и офлайн-магазина:
 					<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
 				</p>
@@ -211,13 +212,13 @@
 			<div class="footer-social">
 				<ul class="footer-social-list">
 					<li class="social button"><a href="#" aria-label="Твиттер"></a></li>
-					<li class="social button" aria-label="Инстаграм"><a href="#"></a></li>
-					<li class="social button" aria-label="Фэйсбук"><a href="#"></a></li>
-					<li class="social button" aria-label="Вконтакте"><a href="#"></a></li>
+					<li class="social button"><a href="#" aria-label="Инстаграм"></a></li>
+					<li class="social button"><a href="#" aria-label="Фэйсбук"></a></li>
+					<li class="social button"><a href="#" aria-label="Вконтакте"></a></li>
 				</ul>
 			</div>
 			<div class="suppliers-navigation">
-				<ul class="suppliers-navigation-list" aria-label="Навигация для поставшиков">
+				<ul class="suppliers-navigation-list">
 					<li class="suppliers-navigation-item">
 						<a href="#">Для поставщиков</a>
 					</li>
@@ -247,9 +248,9 @@
 				<input class="feedback-name" id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
 				<label class="visually-hidden" for="feedback-mail">Ваша почта</label>
 				<input class="feedback-mail" id="feedback-mail" type="email" name="feedback-mail" placeholder="Ваша почта для ответа?">
-				<label class="visually-hidden" id="feedback-message">Ваше сообщение</label>
+				<label class="visually-hidden" for="feedback-message">Ваше сообщение</label>
 				<textarea class="feedback-message" id="feedback-message">
-					Напишите что-нибудь...
+				Напишите что-нибудь...
 				</textarea>
 				<button class="button" type="submit">Отправить</button>
 			</form>
