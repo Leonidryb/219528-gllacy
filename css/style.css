@@ -149,6 +149,15 @@ textarea:focus::placeholder {
 	outline: none;
 }
 
+.blog-subscribe-wrapper {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	margin: 0 27.6px;
+	margin-bottom: 40px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -346,7 +355,7 @@ textarea:focus::placeholder {
 	box-sizing: border-box;
 	z-index: 1000;
 	font-size: 0;
-	max-width: 277px;
+	max-width: 280px; /*реальный 276*/
 	min-height: 214px;
 	padding: 20px 20px;
 	background-color: #f8f7f4;
@@ -397,7 +406,7 @@ textarea:focus::placeholder {
 	line-height: 16px;
 	font-weight: bold;
 	color: #ffffff;
-	/*text-align: right;*/
+	text-align: right;
 }
 
 .short-contacts a {
@@ -428,7 +437,7 @@ textarea:focus::placeholder {
 .offers-slider {
   position: relative;
   padding-top: 310px;
-  padding-bottom: 40px;
+  padding-bottom: 5px;
 }
 
 .radio-slider-btn-1,
@@ -495,17 +504,17 @@ textarea:focus::placeholder {
 }
 
 .slider-controls {
-  position: absolute;
-  padding: 0px 27.6px;
-  bottom: 62px;
-  left: 0px;
-  font-size: 0px;
-  z-index: 120;
+  	position: absolute;
+  	padding: 0px 27.6px;
+  	bottom: 62px;
+  	left: 0px;
+  	font-size: 0px;
+  	z-index: 120;
 }
 .slider-controls label {
   display: inline-block;
   vertical-align: top;
-  margin-right: 9px;
+  margin-right: 8px;
   width: 17px;
   height: 17px;
   background-color: transparent;
@@ -528,6 +537,13 @@ textarea:focus::placeholder {
 	padding-bottom: 12px;
 }
 /*----------------------Специальные предложения----------------------*/
+.special-offers {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 27.6px;
+	margin-bottom: 40px;
+
+}
 .special-offer {
 	font-size: 18px;
 	line-height: 22px;
@@ -585,20 +601,35 @@ textarea:focus::placeholder {
 	line-height: 22px;
 	font-weight: medium;
 	color: #ffffff;
+
+	margin: 0 27.6px;
+	margin-bottom: 37px;
 }
 
 .popular-goods-list {
+	display: flex;
+	justify-content: space-between;
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
 
 .popular-goods-item {
+	display: flex;
+	flex-direction: column-reverse;
 	position: relative;
-	z-index: 1000;
+	z-index: 130;
 	max-width: 267px;
 	text-align: center;
 
+}
+
+.popular-goods-item h3 {
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-top: 13px;
+	z-index: 130;
 }
 
 .popular-goods-item:hover .popular-goods-wrapper {
@@ -631,7 +662,7 @@ textarea:focus::placeholder {
 	display: block;
 	position: absolute;
 	z-index: 120;
-	top: 257px;
+	top: 194px;
 	left: 0;
 }
 
@@ -652,16 +683,28 @@ textarea:focus::placeholder {
 }
 
 .popular-goods-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-wrap: wrap;
 	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: 110;
+	box-sizing: border-box;
+	top: -5px;
+	left: -12.3px;
+	z-index: 100;
+	padding-bottom: 23px;
 	min-width: 293px;
 	min-height: 404px;
 	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 0.2);
 	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	visibility: hidden;
+}
+
+.popular-goods-item .button {
+	padding: 9px 23px;
+  	padding-top: 12px;
+	border-radius: 30px;
 }
 /*---------------Информация о магазине------------------*/
 .shop-info {
@@ -675,6 +718,9 @@ textarea:focus::placeholder {
 	background-image: url(../img/pattern-info.jpg);
 	background-repeat: no-repeat;
 	border-radius: 15px;
+
+	margin: 0 auto;
+	margin-bottom: 40px;
 }
 
 .shop-info-list {
@@ -779,6 +825,10 @@ textarea:focus::placeholder {
 	border-radius: 30px;
 	padding: 10px 20px;
 }
+/*------------------------Карта----------------------------*/
+.map {
+	position: relative;
+}
 /*---------------------Основные контакты------------------*/
 .main-contacts {
 	font-size: 14px;
@@ -787,6 +837,9 @@ textarea:focus::placeholder {
 	color: #323232;
 	text-align: left;
 
+	position: absolute;
+	top: 62px;
+	right: 27px;
 	box-sizing: border-box;
 	max-width: 301px;
 	min-height: 305px;
@@ -831,6 +884,10 @@ textarea:focus::placeholder {
 	line-height: 18px;
 	color: #ffffff;
 	font-weight: normal;
+
+	display: flex;
+	justify-content: space-between;
+	margin-top: 16px;
 }
 
 .footer-social-list {
