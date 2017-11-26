@@ -110,7 +110,7 @@
 							</fieldset>
 							<fieldset>
 								<legend class="visually-hidden">Диапазон цен:</legend>
-								<p>Цена: 100 руб. - 500 руб.</p>
+								<p class="price-range-value">Цена: 100 руб. &#8212; 500 руб.</p>
 								<div class="price-range" id="price-range">
 									<div class="price-range-line-checked">
 									</div>
@@ -127,19 +127,19 @@
 								<ul class="fat-content-list">
 									<li class="fat-content-option">
 										<input class="visually-hidden" id="fat-content-0" type="radio" name="fat-content-value" value="0">
-										<label for="fat-content-0">0%</label>
+										<label class="first-label" for="fat-content-0" tabindex="0">0%</label>
 									</li>
 									<li class="fat-content-option">
 										<input class="visually-hidden" id="fat-content-to-10" type="radio" name="fat-content-value" value="<10" checked>
-										<label for="fat-content-to-10">до 10%</label>
+										<label for="fat-content-to-10" tabindex="0">до 10%</label>
 									</li>
 									<li class="fat-content-option">
 										<input class="visually-hidden" id="fat-content-to-30" type="radio" name="fat-content-value" value="<30">
-										<label for="fat-content-to-30">до 30%</label>
+										<label for="fat-content-to-30" tabindex="0">до 30%</label>
 									</li>
 									<li class="fat-content-option">
 										<input class="visually-hidden" id="fat-content-more-then-30" type="radio" name="fat-content-value" value=">30">
-										<label for="fat-content-more-then-30">выше 30%</label>
+										<label for="fat-content-more-then-30" tabindex="0">выше 30%</label>
 									</li>
 								</ul>
 							</fieldset>
@@ -148,27 +148,29 @@
 								<ul class="fillers-list">
 									<li class="fillers-option">
 										<input class="visually-hidden" id="filler-chocolate" type="checkbox" name="filler-chocolate" checked>
-										<label for="filler-chocolate">Шоколадные</label>
+										<label class="first-label" for="filler-chocolate" tabindex="0">Шоколадные</label>
 									</li>
 									<li class="fillers-option">
 										<input class="visually-hidden" id="filler-sugar" type="checkbox" name="filler-sugar" checked>
-										<label for="filler-sugar">Сахарные присыпки</label>
+										<label for="filler-sugar" tabindex="0">Сахарные присыпки</label>
 									</li>
 									<li class="fillers-option">
 										<input class="visually-hidden" id="filler-fruit" type="checkbox" name="filler-fruit">
-										<label for="filler-fruit">Фрукты</label>
+										<label for="filler-fruit" tabindex="0">Фрукты</label>
 									</li>
 									<li class="fillers-option">
 										<input class="visually-hidden" id="filler-syrup" type="checkbox" name="filler-syrup">
-										<label for="filler-syrup">Сиропы</label>
+										<label for="filler-syrup" tabindex="0">Сиропы</label>
 									</li>
 									<li class="fillers-option">
 										<input class="visually-hidden" id="filler-jam" type="checkbox" name="filler-jam">
-										<label for="filler-jam">Джемы</label>
+										<label for="filler-jam" tabindex="0">Джемы</label>
 									</li>
 								</ul>
 							</fieldset>
-							<button class="filter-button" type="submit">Применить</button>
+							<div class="filter-button-wrapper">
+								<button class="filter-button" type="submit">Применить</button>
+							</div>
 						</form>
 					</section>
 					<section class="catalog">

@@ -154,8 +154,12 @@ textarea:focus::placeholder {
 	flex-direction: row;
 	justify-content: space-between;
 
-	margin: 0 27.6px;
+	margin: 0 0;
 	margin-bottom: 40px;
+}
+
+.container {
+	padding: 0 2.3%;
 }
 
 .visually-hidden {
@@ -170,7 +174,7 @@ textarea:focus::placeholder {
 }
 /*--------------------Навигация по сайту---------------------*/
 .main-header {
-	margin: 0 27.6px;
+	padding: 0 2.3%;
 }
 
 .main-nav {
@@ -549,7 +553,7 @@ textarea:focus::placeholder {
 .special-offers {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 27.6px;
+	margin: 0 0;
 	margin-bottom: 40px;
 
 }
@@ -611,13 +615,12 @@ textarea:focus::placeholder {
 	font-weight: medium;
 	color: #ffffff;
 
-	margin: 0 27.6px;
 	margin-bottom: 37px;
 }
 
 .popular-goods-list {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	align-content: stretch;
@@ -1068,6 +1071,16 @@ textarea:focus::placeholder {
 	line-height: 16px;
 	font-weight: medium;
 	color: #ffffff;
+	margin-bottom: 39px;
+}
+
+.filters-form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: space-between;
+	align-items: flex-end;
+	min-height: 135px;
 }
 
 .filters-form select,
@@ -1075,15 +1088,142 @@ textarea:focus::placeholder {
 	font-size: 16px;
 	line-height: 18px;
 	font-weight: medium;
+	text-transform: lowercase;
 	color: #ffffff;
 }
 
-.filters-form label {
-	margin-right: 10px;
+.fat-content-option label {
+	padding-left: 47px;
+}
+
+.fillers-option label {
+	padding-left: 52px;
+}
+
+.filters-form .first-label {
+	padding-left: 26px;
 }
 
 .filters-form fieldset {
 	border: none;
+	padding: 0;
+	margin: 0;
+	margin-right: 15px;
+}
+
+.filters-form option {
+	color: #323232;
+}
+
+.filters-form option:hover {
+	color: #ffffff;
+}
+
+.filters-form select {
+	font-weight: medium;
+	display: inline-block;
+	padding: 7px 15px;
+	padding-right: 16px;
+	border-radius: 20px 20px 20px 20px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filters-form select:hover {
+	color: #323232;
+}
+
+.filters-form select:active,
+.filters-form select:focus {
+	color: #323232;
+	background-color: #ffffff;
+	outline: none;
+}
+
+.filters-form legend {
+	margin-left: 16px;
+	margin-bottom: 7px;
+}
+
+.fat-content-option label::before {
+	position: absolute;
+	content: "";
+	background-image: url(../img/radio-off.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+	width: 22px;
+	height: 22px;
+	top: -3px;
+	left: 14px;
+	opacity: 0.8;
+}
+
+.fat-content-option input[type="radio"]:checked ~ label::before {
+	background-image: url(../img/radio-on.svg);
+}
+
+.fat-content-option label:hover::before,
+.fat-content-option label:focus::before {
+	opacity: 1;
+}
+
+.fat-content-option label:focus {
+	outline: none;
+}
+
+.fat-content-option .first-label::before {
+	top: -3px;
+	left: -6px;
+}
+
+.fat-content-option input[type="radio"]:disabled ~ label::before {
+	opacity: 0.4;
+}
+
+.fillers-option label::before {
+	position: absolute;
+	content: "";
+	background-image: url(../img/checkbox-off.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 90%;
+	width: 23px;
+	height: 23px;
+	top: -3px;
+	left: 17px;
+	opacity: 0.8;
+}
+
+.fillers-option input[type="checkbox"]:checked ~ label::before {
+	background-image: url(../img/checkbox-on.svg);
+	background-size: 100%;
+
+}
+
+.fillers-option label:hover::before,
+.fillers-option label:focus::before {
+	opacity: 1;
+}
+
+.fillers-option label:focus {
+	outline: none;
+}
+
+.fillers-option .first-label::before {
+	top: -3px;
+	left: -6px;
+}
+
+.fillers-option input[type="checkbox"]:disabled ~ label::before {
+	opacity: 0.4;
+}
+
+.price-range-value {
+	display: block;
+	margin: 0;
+	padding: 0;
+	margin-left: 15px;
+	margin-bottom: 7px;
 }
 
 .fat-content-list,
@@ -1096,16 +1236,16 @@ textarea:focus::placeholder {
 .fat-content-list,
 .fillers-list {
 	display: block;
-	min-width: 415px;
-	padding: 10px 20px;
+	padding: 9px 20px;
 	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 20px 20px 20px 20px;
+	border-radius: 20px;
 
 }
 
 .fillers-option,
 .fat-content-option {
 	display: inline-block;
+	position: relative;
 }
 
 .price-range {
@@ -1113,7 +1253,7 @@ textarea:focus::placeholder {
 	width: 218px;
 	height: 36px;
 	background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 20px 20px 20px 20px;
+	border-radius: 20px;
 }
 
 .price-range-line-nonchecked {
@@ -1165,6 +1305,38 @@ textarea:focus::placeholder {
 	cursor: pointer;
 	transform: scale(1.2);
 }
+
+.filter-button {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: medium;
+	display: inline-block;
+  	vertical-align: top;
+  	text-align: center;
+  	padding: 7px 30px;
+    word-wrap: break-word;
+    color: #ffffff;
+    border: 2px solid #fbfcfb;
+    background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 20px 20px 20px 20px;
+	text-decoration: none;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+	color: #323232;
+	background-color: #ffffff;
+	outline: none;
+}
+
+.filter-button:active {
+	color: #323232;
+    background-color: #ededed;
+    border-radius: 16px;
+    border: none;
+    box-shadow: inset 0 2px 2px #696969;
+    padding: 9px 32px;
+}
 /*------------------------Каталог товаров--------------------------*/
 .catalog {
 	font-size: 16px;
@@ -1172,13 +1344,12 @@ textarea:focus::placeholder {
 	font-weight: medium;
 	color: #ffffff;
 
-	margin: 0 27.6px;
 	margin-bottom: 37px;
 }
 
 .catalog-list {
 	display: flex;
-	justify-content: flex-start;
+	justify-content: space-between;
 	flex-wrap: wrap;
 	align-items: flex-start;
 	align-content: stretch;
@@ -1332,6 +1503,7 @@ textarea:focus::placeholder {
 .pagination-item .curent:hover,
 .pagination-item .curent:focus {
 	background-color: #ffffff;
+	cursor: default;
 }
 
 .pagination-item-link:hover,
@@ -1360,6 +1532,7 @@ textarea:focus::placeholder {
 
 .pagination-item .disabled {
 	background-color: transparent;
+	cursor: default;
 }
 
 .pagination-item .disabled:hover,
@@ -1373,3 +1546,7 @@ textarea:focus::placeholder {
 	color: #323232;
 }
 
+/*----------------------Футер----------------------*/
+.main-footer {
+	padding: 0 2.3%;
+}
