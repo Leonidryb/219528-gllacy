@@ -169,6 +169,15 @@ textarea:focus::placeholder {
   overflow: hidden;
 }
 /*--------------------Навигация по сайту---------------------*/
+.main-header {
+	margin: 0 27.6px;
+}
+
+.main-nav {
+	display: flex;
+	padding-top: 10px;
+}
+
 .site-navigation {
 	font-size: 16px;
 	line-height: 18px;
@@ -608,7 +617,10 @@ textarea:focus::placeholder {
 
 .popular-goods-list {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: stretch;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -621,7 +633,13 @@ textarea:focus::placeholder {
 	z-index: 130;
 	max-width: 267px;
 	text-align: center;
+	margin-right: 25.5px;
+	margin-bottom: 37px;
 
+}
+
+.popular-goods-item:nth-child(4n) {
+	margin-right: 0;
 }
 
 .popular-goods-item h3 {
@@ -634,6 +652,10 @@ textarea:focus::placeholder {
 
 .popular-goods-item:hover .popular-goods-wrapper {
 	visibility: visible;
+}
+
+.popular-goods-item:hover ~ .popular-goods-item {
+	z-index: 110;
 }
 
 .popular-goods-item img {
@@ -1143,3 +1165,211 @@ textarea:focus::placeholder {
 	cursor: pointer;
 	transform: scale(1.2);
 }
+/*------------------------Каталог товаров--------------------------*/
+.catalog {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: medium;
+	color: #ffffff;
+
+	margin: 0 27.6px;
+	margin-bottom: 37px;
+}
+
+.catalog-list {
+	display: flex;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	align-content: stretch;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.catalog-item {
+	display: flex;
+	flex-direction: column-reverse;
+	position: relative;
+	z-index: 130;
+	max-width: 267px;
+	text-align: center;
+	margin-right: 25.5px;
+	margin-bottom: 37px;
+
+}
+
+.catalog-item:nth-child(4n) {
+	margin-right: 0;
+}
+
+.catalog-item h3 {
+	display: block;
+	padding: 0;
+	margin: 0;
+	margin-top: 13px;
+	z-index: 130;
+}
+
+.catalog-item:hover .catalog-item-wrapper {
+	visibility: visible;
+}
+
+.catalog-item:hover ~ .catalog-item {
+	z-index: 110;
+}
+
+.catalog-item img {
+	width: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.catalog-item-link {
+	font-size: 16px;
+	line-height: 22px;
+	font-weight: medium;
+	color: #ffffff;
+	text-decoration: underline;
+	text-decoration-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-item-link:hover,
+.catalog-item-link:focus,
+.catalog-item-link:active {
+	color: rgba(255, 188, 158, 1);
+	text-decoration-color: rgba(255, 188, 158, 0.2);
+}
+
+.catalog-item-price {
+	display: block;
+	position: absolute;
+	z-index: 130;
+	top: 194px;
+	left: 0;
+}
+
+.catalog-item-price:hover {
+	cursor: pointer;
+}
+
+.catalog-item-price .price-value {
+	font-size: 45px;
+	line-height: 45px;
+	font-weight: bold;
+}
+
+.catalog-item-price .measure {
+	font-size: 30px;
+	line-height: 30px;
+	font-weight: bold;
+}
+
+.catalog-item-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	flex-wrap: wrap;
+	position: absolute;
+	box-sizing: border-box;
+	top: -5px;
+	left: -12.3px;
+	z-index: 100;
+	padding-bottom: 23px;
+	min-width: 293px;
+	min-height: 404px;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 0.2);
+	box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+	visibility: hidden;
+}
+
+.catalog-item .button {
+	padding: 9px 23px;
+  	padding-top: 12px;
+	border-radius: 30px;
+}
+/*-----------------------------Пагинатор-----------------------------------*/
+.pagination-list {
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: medium;
+	color: #ffffff;
+
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.pagination-item {
+	text-align: center;
+	margin-right: 2px;
+}
+
+.pagination-item-link {
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: medium;
+	color: #ffffff;
+
+	display: block;
+	box-sizing: border-box;
+	padding-top: 4px;
+	width: 26px;
+	height: 26px;
+	text-decoration: none;
+	border-radius: 50%;
+}
+
+.pagination-item .curent {
+	color: #323232;
+	background-color: #ffffff;
+}
+
+.pagination-item .curent:hover,
+.pagination-item .curent:focus {
+	background-color: #ffffff;
+}
+
+.pagination-item-link:hover,
+.pagination-item-link:focus {
+	background-color: rgba(255, 255, 255, 0.2);
+	outline: none;
+}
+
+.pagination-list .prev path,
+.pagination-list .next path {
+	fill: #ffffff;
+}
+
+.pagination-list .next:active path,
+.pagination-list .next:active path {
+	fill: #323232;
+}
+
+.pagination-list .prev svg {
+	transform: rotate(180deg);
+}
+
+.pagination-list .disabled path {
+	fill: rgba(255, 255, 255, 0.2);
+}
+
+.pagination-item .disabled {
+	background-color: transparent;
+}
+
+.pagination-item .disabled:hover,
+.pagination-item .disabled:focus,
+.pagination-item .disabled:active {
+	background-color: transparent;
+}
+
+.pagination-item-link:active {
+	background-color: #ffffff;
+	color: #323232;
+}
+
