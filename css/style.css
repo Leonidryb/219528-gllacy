@@ -172,15 +172,27 @@ textarea:focus::placeholder {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.header-logo,
+.catalog-logo {
+	width: 154px;
+	height: 64px;
+	margin-right: 9px;
+	align-items: center;
+}
 /*--------------------Навигация по сайту---------------------*/
 .main-header {
 	padding: 0 2.3%;
+	padding-top: 9px;
+	margin-bottom: 0;
 }
 
 .main-nav {
 	display: flex;
-	padding-top: 10px;
+	justify-content: flex-start;
+	align-items: stretch;
 }
+
 
 .site-navigation {
 	font-size: 16px;
@@ -189,6 +201,10 @@ textarea:focus::placeholder {
 	color: #ffffff;
 
 	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	flex-grow: 1;
 	margin: 0;
 	padding: 0;
 }
@@ -202,7 +218,7 @@ textarea:focus::placeholder {
   	padding-bottom: 8px;
     word-wrap: break-word;
 	color: #ffffff;
-	border-radius: 20px 20px 20px 20px;
+	border-radius: 20px;
 }
 
 .site-navigation-item > a:hover,
@@ -307,7 +323,10 @@ textarea:focus::placeholder {
 	color: #ffffff;
 
 	list-style: none;
-	margin-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
 	padding: 0;
 }
 
@@ -333,6 +352,11 @@ textarea:focus::placeholder {
 
 .user-navigation-item {
 	position: relative;
+	margin-right: 10px;
+}
+
+.user-navigation-item:last-child {
+	margin-right: 0px;
 }
 
 .user-search .search {
@@ -413,6 +437,11 @@ textarea:focus::placeholder {
 	text-decoration-color: rgba(232, 77, 55, 0.3);
 	outline: none;
 }
+
+.basket {
+	display: none;
+}
+
 /*----------------Короткие контакты-------------------*/
 .short-contacts {
 	font-size: 14px;
@@ -449,8 +478,9 @@ textarea:focus::placeholder {
 
 .offers-slider {
   position: relative;
-  padding-top: 310px;
+  padding-top: 275px;
   padding-bottom: 5px;
+  margin-bottom: 29px;
 }
 
 .radio-slider-btn-1,
@@ -489,6 +519,7 @@ textarea:focus::placeholder {
 .slider-inner {
 	max-height: 215px;
   	overflow: hidden;
+  	padding-bottom: 5px;
 }
 
 .slide-1,
@@ -500,9 +531,7 @@ textarea:focus::placeholder {
 }
 
 .slider-item {
-	position: absolute;
-	top: 60px;
-	right: 263px;
+	padding-bottom: 5px;
 }
 
 .slider-item  h3 {
@@ -518,8 +547,8 @@ textarea:focus::placeholder {
 
 .slider-controls {
   	position: absolute;
-  	padding: 0px 27.6px;
-  	bottom: 62px;
+  	padding: 0;
+  	bottom: 33px;
   	left: 0px;
   	font-size: 0px;
   	z-index: 120;
@@ -566,7 +595,7 @@ textarea:focus::placeholder {
 
 	box-sizing: border-box;
 	width: 560px;
-	min-height: 229px;
+	min-height: 227px;
 	padding: 25px 18px;
 	padding-right: 20px;
 	border-radius: 15px;
@@ -739,17 +768,44 @@ textarea:focus::placeholder {
 	color: #323232;
 
 	max-width: 1146px;
-	min-height: 308px;
+	min-height: 306px;
+	box-sizing: border-box;
 	background-image: url(../img/pattern-info.jpg);
+	background-size: cover;
 	background-repeat: no-repeat;
 	border-radius: 15px;
 
+	padding: 15px 0;
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
 
 .shop-info-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
 	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.shop-info-item {
+	position: relative;
+	flex-grow: 0;
+	flex-shrink: 1;
+	flex-basis: auto;
+	box-sizing: border-box;
+	width: 50%;
+	padding: 11px;
+  	padding-left: 68px;
+  	padding-right: 21px;
+	outline: 1px solid blue;
+}
+
+.shop-info-item > p {
 	margin: 0;
 	padding: 0;
 }
@@ -758,6 +814,9 @@ textarea:focus::placeholder {
 	font-size: 24px;
 	line-height: 30px;
 	font-weight: medium;
+
+	padding: 0;
+	margin: 0;
 }
 
 /*--------------------Блог магазина глэйси--------------------*/
