@@ -319,7 +319,7 @@ textarea:focus::placeholder {
 .user-navigation {
 	font-size: 14px;
 	line-height: 16px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 
 	list-style: none;
@@ -331,15 +331,16 @@ textarea:focus::placeholder {
 }
 
 .user-navigation-item > a {
+	position: relative;
 	display: inline-block;
   	vertical-align: top;
   	text-align: center;
-  	padding: 7px 14px;
-  	padding-bottom: 8px;
+  	padding: 8px 35px;
+  	padding-left: 44px;
     word-wrap: break-word;
     color: #ffffff;
     background-color: rgba(255, 255, 255, 0.2);
-	border-radius: 20px 20px 20px 20px;
+	border-radius: 20px;
 	text-decoration: none;
 }
 
@@ -348,6 +349,27 @@ textarea:focus::placeholder {
 	color: #323232;
 	background-color: rgba(248, 247, 244, 1);
 	outline: none;
+}
+
+.user-navigation-item > a:hover path,
+.user-navigation-item > a:focus path,
+.user-navigation-item > a:hover circle,
+.user-navigation-item > a:focus circle {
+	fill: #000000;
+}
+
+.user-navigation-item-icon {
+	position: absolute;
+	top: 6px;
+	left: 15px;
+}
+
+.user-search > a {
+	padding: 6px 8px;
+}
+
+.user-login > a {
+	padding-right: 16px;
 }
 
 .user-navigation-item {
@@ -641,10 +663,8 @@ textarea:focus::placeholder {
 .popular-goods {
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
-
-	/*margin-bottom: 37px;*/
 }
 
 .popular-goods-list {
@@ -665,14 +685,9 @@ textarea:focus::placeholder {
 	z-index: 130;
 	max-width: 267px;
 	text-align: center;
-	margin-right: 25.5px;
 	margin-bottom: 37px;
-
 }
 
-.popular-goods-item:nth-child(4n) {
-	margin-right: 0;
-}
 
 .popular-goods-item h3 {
 	display: block;
@@ -696,10 +711,23 @@ textarea:focus::placeholder {
 	overflow: hidden;
 }
 
+.popular-goods-item::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 61px;
+	height: 61px;
+	background-image: url(../img/hit.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+
 .popular-goods-item-link {
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 	text-decoration: underline;
 	text-decoration-color: rgba(255, 255, 255, 0.2);
@@ -728,6 +756,21 @@ textarea:focus::placeholder {
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: bold;
+
+	margin-right: 30px;
+}
+
+.popular-goods-price .price-value::before {
+	position: absolute;
+	top: 7px;
+	right: 40px;
+	content: "";
+	width: 32px;
+	height: 32px;
+	background-image: url(../img/ruble.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
 }
 
 .popular-goods-price .measure {
@@ -775,7 +818,9 @@ textarea:focus::placeholder {
 	background-repeat: no-repeat;
 	border-radius: 15px;
 
-	padding: 15px 0;
+	padding: 25px 0;
+	padding-left: 20px;
+	padding-bottom: 0;
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
@@ -789,6 +834,7 @@ textarea:focus::placeholder {
 
 	list-style: none;
 	margin: 0;
+	margin-top: 10px;
 	padding: 0;
 }
 
@@ -800,9 +846,8 @@ textarea:focus::placeholder {
 	box-sizing: border-box;
 	width: 50%;
 	padding: 11px;
-  	padding-left: 68px;
+  	padding-left: 58px;
   	padding-right: 21px;
-	outline: 1px solid blue;
 }
 
 .shop-info-item > p {
@@ -813,17 +858,45 @@ textarea:focus::placeholder {
 .shop-info > p {
 	font-size: 24px;
 	line-height: 30px;
-	font-weight: medium;
+	font-weight: 500;
 
 	padding: 0;
 	margin: 0;
+}
+
+.shop-info-item::before {
+	position: absolute;
+	top: -2px;
+	left: 0;
+	content: "";
+	width: 50px;
+	height: 50px;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+
+.shop-info-item:nth-child(1)::before {
+	background-image: url(../img/ice-cream.svg);
+}
+
+.shop-info-item:nth-child(2)::before {
+	background-image: url(../img/cow.svg);
+}
+
+.shop-info-item:nth-child(3)::before {
+	background-image: url(../img/eco.svg);
+}
+
+.shop-info-item:nth-child(4)::before {
+	background-image: url(../img/thermometer.svg);
 }
 
 /*--------------------Блог магазина глэйси--------------------*/
 .shop-blog {
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #323232;
 
 	box-sizing: border-box;
@@ -985,6 +1058,7 @@ textarea:focus::placeholder {
 	width: 560px;
 	box-sizing: border-box;
 	margin-right: 26px;
+	padding: 0 128px;
 }
 
 
@@ -1039,14 +1113,10 @@ textarea:focus::placeholder {
 	padding: 0;
 }
 
-.suppliers-navigation {
-	padding: 0 128px;
-}
-
-
 .suppliers-navigation-list {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -1058,11 +1128,16 @@ textarea:focus::placeholder {
 	padding: 0;
 }
 
-.suppliers-navigation-item-wrapper:first-child .suppliers-navigation-item:first-child {
+.suppliers-navigation-item:nth-child(1) {
 	position: relative;
+	margin-right: 32px;
 }
 
-.suppliers-navigation-item-wrapper:first-child .suppliers-navigation-item:first-child::before {
+.suppliers-navigation-item:nth-child(3) {
+	margin-right: 43px;
+}
+
+.suppliers-navigation-item:nth-child(1)::before {
 	position: absolute;
 	top: 3px;
 	left: -22px;
@@ -1073,10 +1148,6 @@ textarea:focus::placeholder {
 	background-repeat: no-repeat;
 	background-size: 100%;
 	background-position: center;
-}
-
-.suppliers-navigation-item-wrapper:first-child {
-	margin-right: 32px;
 }
 
 .suppliers-navigation-list a {
@@ -1119,12 +1190,13 @@ textarea:focus::placeholder {
 .popup {
 	font-size: 24px;
 	line-height: 28px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #323232;
 
 	/*position: fixed;*/
-	/*top: 50%;*/
-	/*left: 50%;*/
+	/*top: 50%;
+	left: 50%;*/
+	position: relative;  /*временно релатив*/
 	box-sizing: border-box;
 	max-width: 477px;
 	min-height: 442px;
@@ -1167,9 +1239,32 @@ textarea:focus::placeholder {
 }
 
 .popup .modal-close {
-	/*position: absolute;*/
-	/*top: 0;*/
-	/*right: 0;*/
+ 	position: absolute;
+  	top: 13px;
+  	right: 25px;
+  	width: 20px;
+  	height: 20px;
+  	font-size: 0;
+  	border: 0;
+  	background-color: transparent;
+  	cursor: pointer;
+}
+
+.popup .modal-close::before,
+.popup .modal-close::after {
+  	content: "";
+  	position: absolute;
+  	width: 22px;
+  	height: 2px;
+  	background-color: #231f20;
+}
+
+.popup .modal-close::before {
+  	transform: rotate(45deg);
+}
+
+.popup .modal-close::after {
+  	transform: rotate(-45deg);
 }
 /*------------------Хлебные крошки---------------------*/
 .breadcrumbs {
@@ -1226,7 +1321,7 @@ textarea:focus::placeholder {
 .filters {
 	font-size: 14px;
 	line-height: 16px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 	margin-bottom: 39px;
 }
@@ -1244,7 +1339,7 @@ textarea:focus::placeholder {
 .filters-form label {
 	font-size: 16px;
 	line-height: 18px;
-	font-weight: medium;
+	font-weight: 500;
 	text-transform: lowercase;
 	color: #ffffff;
 }
@@ -1277,7 +1372,7 @@ textarea:focus::placeholder {
 }
 
 .filters-form select {
-	font-weight: medium;
+	font-weight: 500;
 	display: inline-block;
 	padding: 7px 15px;
 	padding-right: 16px;
@@ -1466,7 +1561,7 @@ textarea:focus::placeholder {
 .filter-button {
 	font-size: 16px;
 	line-height: 18px;
-	font-weight: medium;
+	font-weight: 500;
 	display: inline-block;
   	vertical-align: top;
   	text-align: center;
@@ -1498,7 +1593,7 @@ textarea:focus::placeholder {
 .catalog {
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 
 	margin-bottom: 37px;
@@ -1556,7 +1651,7 @@ textarea:focus::placeholder {
 .catalog-item-link {
 	font-size: 16px;
 	line-height: 22px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 	text-decoration: underline;
 	text-decoration-color: rgba(255, 255, 255, 0.2);
@@ -1624,7 +1719,7 @@ textarea:focus::placeholder {
 	align-items: flex-start;
 	font-size: 16px;
 	line-height: 18px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 
 	margin: 0;
@@ -1640,7 +1735,7 @@ textarea:focus::placeholder {
 .pagination-item-link {
 	font-size: 16px;
 	line-height: 18px;
-	font-weight: medium;
+	font-weight: 500;
 	color: #ffffff;
 
 	display: block;
