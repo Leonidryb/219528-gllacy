@@ -344,6 +344,18 @@ textarea:focus::placeholder {
 	text-decoration: none;
 }
 
+.user-basket-full > a {
+	padding-right: 20px;
+	padding-left: 40px;
+	color: #323232;
+	background-color: rgba(248, 247, 244, 1);
+}
+
+.user-basket-full > a path,
+.user-basket-full > a circle {
+	fill: #000000;
+}
+
 .user-navigation-item > a:hover,
 .user-navigation-item > a:focus {
 	color: #323232;
@@ -471,6 +483,10 @@ textarea:focus::placeholder {
 	font-weight: bold;
 	color: #ffffff;
 	text-align: right;
+}
+
+.short-contacts-catalog-wrapper {
+	float: right;
 }
 
 .short-contacts a {
@@ -1049,6 +1065,15 @@ textarea:focus::placeholder {
 	min-height: 104px;
 }
 
+.catalog-footer-wrapper {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+
+	padding-top: 24px;
+	border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .footer-social {
 	width: 267px;
 	margin-right: 26px;
@@ -1275,6 +1300,7 @@ textarea:focus::placeholder {
 
 	list-style: none;
 	margin: 0;
+	margin-top: 27px;
 	padding: 0;
 }
 
@@ -1316,6 +1342,10 @@ textarea:focus::placeholder {
 	line-height: 41px;
 	font-weight: bold;
 	color: #ffffff;
+
+	margin: 0;
+	margin-top: 4px;
+	padding: 0;
 }
 /*----------------------Фильтр товаров------------------*/
 .filters {
@@ -1323,6 +1353,7 @@ textarea:focus::placeholder {
 	line-height: 16px;
 	font-weight: 500;
 	color: #ffffff;
+	margin-top: 23px;
 	margin-bottom: 39px;
 }
 
@@ -1680,6 +1711,21 @@ textarea:focus::placeholder {
 	font-size: 45px;
 	line-height: 45px;
 	font-weight: bold;
+
+	margin-right: 30px;
+}
+
+.catalog-item-price .price-value::before {
+	position: absolute;
+	top: 7px;
+	right: 40px;
+	content: "";
+	width: 32px;
+	height: 32px;
+	background-image: url(../img/ruble.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
 }
 
 .catalog-item-price .measure {
@@ -1725,6 +1771,12 @@ textarea:focus::placeholder {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.pagination-wrapper {
+	display: flex;
+	justify-content: flex-end;
+	margin-bottom: 24px;
 }
 
 .pagination-item {
