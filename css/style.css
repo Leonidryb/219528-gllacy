@@ -479,10 +479,6 @@ textarea:focus::placeholder {
 	background-color: rgba(248, 247, 244, 1);
 }
 
-.user-basket-full > a path,
-.user-basket-full > a circle {
-	fill: #000000;
-}
 
 .user-navigation-item > a:hover,
 .user-navigation-item > a:focus {
@@ -491,12 +487,13 @@ textarea:focus::placeholder {
 	outline: none;
 }
 
-.user-navigation-item > a:hover path,
-.user-navigation-item > a:focus path,
-.user-navigation-item > a:hover circle,
-.user-navigation-item > a:focus circle {
+.user-navigation-item:not(.user-basket-full) > a:hover path,
+.user-navigation-item:not(.user-basket-full) > a:focus path,
+.user-navigation-item:not(.user-basket-full) > a:hover circle,
+.user-navigation-item:not(.user-basket-full) > a:focus circle {
 	fill: #000000;
 }
+
 
 .user-navigation-item-icon {
 	position: absolute;
@@ -967,9 +964,9 @@ textarea:focus::placeholder {
 	        flex-direction: column-reverse;
 	position: relative;
 	z-index: 130;
-	max-width: 267px;
+	width: 267px;
 	text-align: center;
-	margin-bottom: 37px;
+	margin-bottom: 35px;
 }
 
 
@@ -1085,7 +1082,7 @@ textarea:focus::placeholder {
 	z-index: 100;
 	padding-bottom: 23px;
 	min-width: 293px;
-	min-height: 404px;
+	height: 404px;
 	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 0.2);
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -1404,12 +1401,13 @@ textarea:focus::placeholder {
 	    -ms-flex-align: center;
 	        align-items: center;
 
-	padding-top: 24px;
+	padding-top: 18px;
 	border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer-social {
 	width: 267px;
+	padding-bottom: 10px;
 	margin-right: 26px;
 }
 
@@ -1419,19 +1417,26 @@ textarea:focus::placeholder {
 	        box-sizing: border-box;
 	margin-right: 26px;
 	padding: 0 120px;
-	padding-left: 126px;
+	padding-left: 128px;
+	padding-bottom: 5px;
 }
 
 
 .footer-copyright {
+	font-size: 12px;
+	line-height: 18px;
+	color: #ffffff;
+	font-weight: normal;
+
 	width: 267px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
-	padding-left: 65px;
+	padding-left: 75px;
+	padding-bottom: 20px;
 }
 
 .social-button {
-	margin-right: 11px;
+	margin-right: 12px;
 }
 
 .social-button-link {
@@ -1759,12 +1764,16 @@ textarea:focus::placeholder {
 }
 
 .filters-form select {
+	box-sizing: border-box;
+	height: 36px;
+	width: 193px;
+	border: 0;
 	-moz-appearance: none;
 	-webkit-appearance: none;
 		appearance: none;
 }
 
-.filters-form select::ms-expand {
+.filters-form select::-ms-expand {
 	display:none;
 }
 
@@ -1785,6 +1794,14 @@ textarea:focus::placeholder {
 	padding-left: 52px;
 }
 
+.fillers-option:nth-child(5) label {
+	padding-left: 44px;
+}
+
+.fillers-option:nth-child(5) label::before {
+	left: 12px;
+}
+
 .filters-form .first-label {
 	padding-left: 26px;
 }
@@ -1797,7 +1814,12 @@ textarea:focus::placeholder {
 }
 
 .filters-form option {
+	font-size: 14px;
+	line-height: 16px;
+	font-weight: 400;
 	color: #323232;
+
+	border: 0;
 }
 
 .filters-form option:hover {
@@ -2036,7 +2058,7 @@ textarea:focus::placeholder {
 	font-weight: 500;
 	color: #ffffff;
 
-	margin-bottom: 37px;
+	margin-bottom: 35px;
 }
 
 .catalog-list {
@@ -2068,15 +2090,10 @@ textarea:focus::placeholder {
 	        flex-direction: column-reverse;
 	position: relative;
 	z-index: 130;
-	max-width: 267px;
+	width: 267px;
 	text-align: center;
-	margin-right: 25.5px;
-	margin-bottom: 37px;
+	margin-bottom: 35px;
 
-}
-
-.catalog-item:nth-child(4n) {
-	margin-right: 0;
 }
 
 .catalog-item h3 {
@@ -2178,7 +2195,7 @@ textarea:focus::placeholder {
 	z-index: 100;
 	padding-bottom: 23px;
 	min-width: 293px;
-	min-height: 404px;
+	height: 404px;
 	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 0.2);
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -2209,6 +2226,7 @@ textarea:focus::placeholder {
 
 	margin: 0;
 	padding: 0;
+	margin-top: 10px;
 	list-style: none;
 }
 
@@ -2219,12 +2237,13 @@ textarea:focus::placeholder {
 	-webkit-box-pack: end;
 	    -ms-flex-pack: end;
 	        justify-content: flex-end;
-	margin-bottom: 24px;
+	margin-bottom: 28px;
+	margin-right: -10px;
 }
 
 .pagination-item {
 	text-align: center;
-	margin-right: 2px;
+	margin-right: 3px;
 }
 
 .pagination-item-link {
