@@ -1840,6 +1840,7 @@ textarea:focus::placeholder {
 
 .filters-form select:hover {
 	color: #323232;
+	background-image: url(../img/select-arrow-b.svg);
 }
 
 .filters-form select:active,
