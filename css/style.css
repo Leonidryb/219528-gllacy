@@ -778,7 +778,7 @@ textarea:focus::placeholder {
 
 .working-hours {
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 	margin-bottom: 5px;
 }
 /*------------------Слайдер----------------------*/
@@ -1279,7 +1279,7 @@ textarea:focus::placeholder {
 
 .blog-new {
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 	margin: 0;
 	margin-bottom: 3px;
 	padding: 0;
@@ -1364,6 +1364,11 @@ textarea:focus::placeholder {
 	background-color: #ffffff;
 
 }
+
+.map-responsive-js iframe {
+	width: 100%;
+	border: none;
+}
 /*---------------------Основные контакты------------------*/
 .main-contacts {
 	font-size: 14px;
@@ -1390,7 +1395,7 @@ textarea:focus::placeholder {
 
 .main-contacts p {
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 	padding: 0;
 	padding-bottom: 20px;
 	margin: 0;
@@ -2007,7 +2012,7 @@ textarea:focus::placeholder {
 .filters-form select {
 	font-weight: 500;
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 	padding: 7px 15px;
 	padding-right: 35px;
 	border-radius: 20px 20px 20px 20px;
@@ -2149,7 +2154,7 @@ textarea:focus::placeholder {
 .fillers-option,
 .fat-content-option {
 	display: inline-block;
-	vertical-align: center;
+	vertical-align: middle;
 	position: relative;
 }
 
