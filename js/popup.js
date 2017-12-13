@@ -28,20 +28,20 @@ close.addEventListener("click", function (evt) {
   });
 
 form.addEventListener("submit", function (evt) {
-	if (!nameFocus.value || !mailValid.value) {
+  if (!nameFocus.value || !mailValid.value) {
     evt.preventDefault();
-	  popup.classList.remove("feedback-error");
+    popup.classList.remove("feedback-error");
     popup.offsetWidth = popup.offsetWidth;
-	  popup.classList.add("feedback-error");
+    popup.classList.add("feedback-error");
     }
   });
 
-  window.addEventListener("keydown", function (evt) {
-    if (evt.keyCode === 27) {
-      if (popup.classList.contains("feedback-show")) {
-        popup.classList.remove("feedback-show");
-        popup.classList.remove("feedback-error");
-        blackout.classList.remove("popup-blackout-show");
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popup.classList.contains("feedback-show")) {
+      popup.classList.remove("feedback-show");
+      popup.classList.remove("feedback-error");
+      blackout.classList.remove("popup-blackout-show");
       }
     }
   });
