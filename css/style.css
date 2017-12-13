@@ -808,29 +808,29 @@ textarea:focus::placeholder {
 	display: none;
 }
 
-#slider-btn-1:checked ~ .page-wrapper .offers-slider .slide-1,
-#slider-btn-2:checked ~ .page-wrapper .offers-slider .slide-2,
-#slider-btn-3:checked ~ .page-wrapper .offers-slider .slide-3 {
+.radio-slider-btn-1:checked ~ .page-wrapper .offers-slider .slide-1,
+.radio-slider-btn-2:checked ~ .page-wrapper .offers-slider .slide-2,
+.radio-slider-btn-3:checked ~ .page-wrapper .offers-slider .slide-3 {
 	display: block;
 }
 
-#slider-btn-1:checked ~ .page-wrapper .slider-controls label[for="slider-btn-1"],
-#slider-btn-2:checked ~ .page-wrapper .slider-controls label[for="slider-btn-2"],
-#slider-btn-3:checked ~ .page-wrapper .slider-controls label[for="slider-btn-3"] {
+.radio-slider-btn-1:checked ~ .page-wrapper .slider-controls label[for="slider-btn-1"],
+.radio-slider-btn-2:checked ~ .page-wrapper .slider-controls label[for="slider-btn-2"],
+.radio-slider-btn-3:checked ~ .page-wrapper .slider-controls label[for="slider-btn-3"] {
 	background-color: #ffffff;
 }
 
-#slider-btn-1:checked ~ .page-wrapper {
+.radio-slider-btn-1:checked ~ .page-wrapper {
 	background-color: #849d8f;
 	background-image: url(../img/slide-1.png);
 }
 
-#slider-btn-2:checked ~ .page-wrapper {
+.radio-slider-btn-2:checked ~ .page-wrapper {
 	background-color: #8996a6;
 	background-image: url(../img/slide-2.png);
 }
 
-#slider-btn-3:checked ~ .page-wrapper {
+.radio-slider-btn-3:checked ~ .page-wrapper {
 	background-color: #9d8b84;
 	background-image: url(../img/slide-3.png);
 }
