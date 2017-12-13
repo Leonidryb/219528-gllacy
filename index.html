@@ -5,7 +5,7 @@
 		<title>Магазин "Глейси"</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
 		<link href="css/normalize.css" rel="stylesheet">
-		<link href="css/style.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
 	</head>
 	<body>
 		<input class="radio-slider-btn-1" type="radio" id="slider-btn-1" name="toggle" checked>
@@ -21,13 +21,15 @@
 						<ul class="site-navigation">
 							<li class="site-navigation-item">
 								<a href="catalog.html">Каталог</a>
-								<ul class="catalog-navigation">
-									<li class="catalog-navigation-item title">Новинки</li>
-									<li class="catalog-navigation-item"><a href="catalog.html">Сливочное</a></li>
-									<li class="catalog-navigation-item"><a href="sterbets.html">Щербеты</a></li>
-									<li class="catalog-navigation-item"><a href="fruit.html">Фруктовый лед</a></li>
-									<li class="catalog-navigation-item"><a href="mellorine.html">Мелорин</a></li>
-								</ul>
+								<div class="catalog-navigation-wrapper">
+									<ul class="catalog-navigation">
+										<li class="catalog-navigation-item title">Новинки</li>
+										<li class="catalog-navigation-item"><a href="catalog.html">Сливочное</a></li>
+										<li class="catalog-navigation-item"><a href="sterbets.html">Щербеты</a></li>
+										<li class="catalog-navigation-item"><a href="fruit.html">Фруктовый лед</a></li>
+										<li class="catalog-navigation-item"><a href="mellorine.html">Мелорин</a></li>
+									</ul>
+								</div>
 							</li>
 							<li class="site-navigation-item"><a href="payment.html">Доставка и оплата</a></li>
 							<li class="site-navigation-item"><a href="info.html">О Компании</a></li>
@@ -35,27 +37,31 @@
 						<ul class="user-navigation">
 							<li class="user-navigation-item user-search">
 								<a href="#"><span class="visually-hidden">Поиск</span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#fff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg></a>
-								<div class="modal search">
-									<form class="search-form" method="get">
-										<label class="visually-hidden" for="search-form">Поиск</label>
-										<input id="search-form" type="search" name="search" placeholder="Что ищем?">
-									</form>
+								<div class="search-wrapper">
+									<div class="modal search">
+										<form class="search-form" method="get">
+											<label class="visually-hidden" for="search-form">Поиск</label>
+											<input id="search-form" type="search" name="search" placeholder="Что ищем?">
+										</form>
+									</div>
 								</div>
 							</li>
 							<li class="user-navigation-item user-login">
 								<a href="#"><svg class="user-navigation-item-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19"><g fill="#fff"><path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/><path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/></g></svg>Вход</a>
-								<div class="modal login">
-									<form class="login-form" method="post">
-										<label class="visually-hidden" for="user-mail">Почта</label>
-										<input id="user-mail" type="email" name="email" placeholder="Электронная почта" required>
-										<label class="visually-hidden" for="user-password">Пароль</label>
-										<input id="user-password" type="password" name="password" placeholder="Пароль" required>
-										<button class="button" type="submit">Войти</button>
-										<div class="login-form-links">
-											<a class="restore" href="#">Забыли пароль?</a>
-											<a class="registration" href="#">Новая регистрация</a>
-										</div>
-									</form>
+								<div class="login-wrapper">
+									<div class="modal login">
+										<form class="login-form" method="post">
+											<label class="visually-hidden" for="user-mail">Почта</label>
+											<input id="user-mail" type="email" name="email" placeholder="Электронная почта" required>
+											<label class="visually-hidden" for="user-password">Пароль</label>
+											<input id="user-password" type="password" name="password" placeholder="Пароль" required>
+											<button class="button" type="submit">Войти</button>
+											<div class="login-form-links">
+												<a class="restore" href="#">Забыли пароль?</a>
+												<a class="registration" href="#">Новая регистрация</a>
+											</div>
+										</form>
+									</div>
 								</div>
 							</li>
 							<li class="user-navigation-item user-basket"><a href="#"><span class="visually-hidden">Корзина</span><svg class="user-navigation-item-icon" xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20"><g fill="#FFF"><path d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z"/><circle cx="6.984" cy="18" r="2"/><circle cx="15.984" cy="18" r="2"/></g></svg> Пусто</a></li>
@@ -216,7 +222,7 @@
 							<p class="main-contcats-phone">
 								Для заказов по телефону:<br> <span class="phone">8 812 450-25-25</span><br> (c 10 до 20 ежедневно)
 							</p>
-							<button class="button feedback">Форма обратной связи</button>
+							<a href="#" class="button feedback-link">Форма обратной связи</a>
 						</section>
 					</section>
 					<footer class="main-footer">
@@ -230,18 +236,18 @@
 						</div>
 						<div class="suppliers-navigation">
 							<ul class="suppliers-navigation-list">
-									<li class="suppliers-navigation-item">
-										<a href="#">Для поставщиков</a>
-									</li>
-									<li class="suppliers-navigation-item">
-										<a href="#">Наши документы</a>
-									</li>
-									<li class="suppliers-navigation-item">
-										<a href="#">О производстве</a>
-									</li>
-									<li class="suppliers-navigation-item">
-										<a href="#">Экологические стандарты</a>
-									</li>
+								<li class="suppliers-navigation-item">
+									<a href="#">Для поставщиков</a>
+								</li>
+								<li class="suppliers-navigation-item">
+									<a href="#">Наши документы</a>
+								</li>
+								<li class="suppliers-navigation-item">
+									<a href="#">О производстве</a>
+								</li>
+								<li class="suppliers-navigation-item">
+									<a href="#">Экологические стандарты</a>
+								</li>
 							</ul>
 						</div>
 						<div class="footer-copyright">
@@ -256,7 +262,7 @@
 					<section class="popup feedback">
 						<h2 class="visually-hidden">Форма обратной связи</h2>
 						<b class="popup-title">Мы обязательно вам ответим!</b>
-						<form class="feedback-form" method="post">
+						<form class="feedback-form" method="get">
 							<label class="visually-hidden" for="feedback-name">Ваше имя</label>
 							<input class="feedback-name" id="feedback-name" type="text" name="feedback-name" placeholder="Как вас зовут?">
 							<label class="visually-hidden" for="feedback-mail">Ваша почта</label>
@@ -269,5 +275,9 @@
 					</section>
 				</div>
 			</div>
+			<div class="map-responsive-js">
+				<iframe src="https://yandex.ru/map-widget/v1/-/CBakYKWw1B" width="100%" height="430" frameborder="0"></iframe>
+			</div>
+			<script src="js/popup.js"></script>
 		</body>
 	</html>

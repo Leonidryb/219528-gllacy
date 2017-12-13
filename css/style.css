@@ -1,4 +1,5 @@
 body {
+	position: relative;
 	margin: 0;
 	padding: 0;
 	min-width: 900px;
@@ -376,10 +377,7 @@ textarea:focus::placeholder {
 
 	list-style: none;
 
-	position: absolute;
 	z-index: 1000;
-	top: 37px;
-	left: -6px;
 	min-width:  143px;
   	margin: 0px;
   	padding: 0px;
@@ -387,7 +385,17 @@ textarea:focus::placeholder {
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.catalog-navigation-wrapper {
+	position: absolute;
+	top: 25px;
+	left: -6px;
+	z-index: 1000;
+
+	padding-top: 12px;
 	visibility: hidden;
+
 }
 
 .catalog-navigation-item a {
@@ -420,7 +428,11 @@ textarea:focus::placeholder {
 	border-radius: 5px;
 }
 
-.site-navigation-item:hover .catalog-navigation {
+.site-navigation-item:hover .catalog-navigation-wrapper {
+	visibility: visible;
+}
+
+.catalog-navigation:hover .catalog-navigation-wrapper {
 	visibility: visible;
 }
 
@@ -519,22 +531,31 @@ textarea:focus::placeholder {
 }
 
 .user-search .search {
-	position: absolute;
-	z-index: 1000;
-	top: 36px;
-	left: -271px;
 	min-width: 340px;
 	min-height: 84px;
 	background-color: #f8f7f4;
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-	visibility: hidden;
 
 }
 
-.user-search:hover .search {
+.user-search:hover .search-wrapper {
 	visibility: visible;
+}
+
+.search:hover .search-wrapper {
+	visibility: visible;
+}
+
+.search-wrapper {
+	position: absolute;
+	z-index: 1000;
+	top: 25px;
+	left: -308px;
+
+	padding-top: 11px;
+	visibility: hidden;
 }
 
 .user-basket-full:hover .basket {
@@ -550,14 +571,10 @@ textarea:focus::placeholder {
 }
 
 .user-login .login {
-	position: absolute;
-	top: 35px;
-	left: -216px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
-	z-index: 1000;
 	font-size: 0;
-	max-width: 280px; /*реальный 276*/
+	max-width: 280px;
 	min-height: 214px;
 	padding: 20px 20px;
 	padding-right: 10px;
@@ -565,10 +582,23 @@ textarea:focus::placeholder {
 	border-radius: 5px;
 	-webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 	        box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.login-wrapper {
+	position: absolute;
+	z-index: 1000;
+	top: 25px;
+	left: -184px;
+
+	padding-top: 11px;
 	visibility: hidden;
 }
 
-.user-login:hover .login {
+.user-login:hover .login-wrapper {
+	visibility: visible;
+}
+
+.login-wrapper:hover .login-wrapper {
 	visibility: visible;
 }
 
@@ -608,11 +638,15 @@ textarea:focus::placeholder {
 }
 
 /*------------------------Корзина товаов--------------------*/
-.basket {
-	visibility: hidden;
+.basket-wrapper {
 	position: absolute;
-	top: 34px;
+	top: 24px;
 	left: -423px;
+	z-index: 1000;
+
+	padding-top: 10px;
+	visibility: hidden;
+
 }
 
 .basket-table {
@@ -744,6 +778,7 @@ textarea:focus::placeholder {
 
 .working-hours {
 	display: inline-block;
+	vertical-align: center;
 	margin-bottom: 5px;
 }
 /*------------------Слайдер----------------------*/
@@ -1106,6 +1141,7 @@ textarea:focus::placeholder {
 	min-height: 306px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
+	background-color: #ffffcc;
 	background-image: url(../img/pattern-info.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -1243,6 +1279,7 @@ textarea:focus::placeholder {
 
 .blog-new {
 	display: inline-block;
+	vertical-align: center;
 	margin: 0;
 	margin-bottom: 3px;
 	padding: 0;
@@ -1318,6 +1355,13 @@ textarea:focus::placeholder {
 .map {
 	position: relative;
 }
+
+.map-responsive-js {
+	position: absolute;
+	top: 1884px;
+	width: 100%;
+
+}
 /*---------------------Основные контакты------------------*/
 .main-contacts {
 	font-size: 14px;
@@ -1327,6 +1371,7 @@ textarea:focus::placeholder {
 	text-align: left;
 
 	position: absolute;
+	z-index: 1000;
 	top: 62px;
 	right: 27px;
 	-webkit-box-sizing: border-box;
@@ -1343,6 +1388,7 @@ textarea:focus::placeholder {
 
 .main-contacts p {
 	display: inline-block;
+	vertical-align: center;
 	padding: 0;
 	padding-bottom: 20px;
 	margin: 0;
@@ -1573,24 +1619,77 @@ textarea:focus::placeholder {
 	outline: none;
 }
 /*--------------------Всплывающее окно обратной связи-----------------*/
+@keyframes open {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  70% {
+    transform: translateX(30px);
+  }
+
+  90% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .popup {
 	font-size: 24px;
 	line-height: 28px;
 	font-weight: 500;
 	color: #323232;
 
-	/*position: fixed;*/
-	/*top: 50%;
-	left: 50%;*/
-	position: relative;  /*временно релатив*/
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 1200;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	max-width: 477px;
 	min-height: 442px;
 	margin: 0 auto;
+	margin-left: -240px;
+	margin-top: -220px;
 	padding: 16px 23px;
 	background-color: #f8f7f4;
 	border-radius: 10px;
+	display: none;
+}
+
+.feedback-show {
+	display: block;
+
+	animation: open 0.6s;
+}
+
+.feedback-error {
+	animation: shake 0.6s;
 }
 
 .popup input[type="text"] {
@@ -1656,6 +1755,10 @@ textarea:focus::placeholder {
   	border: 0;
   	background-color: transparent;
   	cursor: pointer;
+}
+
+.popup .modal-close:focus {
+	outline: none;
 }
 
 .popup .modal-close::before,
@@ -1829,6 +1932,7 @@ textarea:focus::placeholder {
 .filters-form select {
 	font-weight: 500;
 	display: inline-block;
+	vertical-align: center;
 	padding: 7px 15px;
 	padding-right: 35px;
 	border-radius: 20px 20px 20px 20px;
@@ -1915,6 +2019,7 @@ textarea:focus::placeholder {
 .fillers-option label:hover::before,
 .fillers-option label:focus::before {
 	opacity: 1;
+	outline: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .fillers-option label:focus {
@@ -1957,6 +2062,7 @@ textarea:focus::placeholder {
 .fillers-option,
 .fat-content-option {
 	display: inline-block;
+	vertical-align: center;
 	position: relative;
 }
 
