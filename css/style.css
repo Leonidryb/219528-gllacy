@@ -1621,28 +1621,54 @@ textarea:focus::placeholder {
 	outline: none;
 }
 /*--------------------Всплывающее окно обратной связи-----------------*/
-@keyframes open {
+@-webkit-keyframes open {
   0% {
-    transform: translateX(-2000px);
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
   }
 
   70% {
-    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
   }
 
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+@keyframes open {
+  0% {
+    -webkit-transform: translateX(-2000px);
+            transform: translateX(-2000px);
+  }
+
+  70% {
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
+  }
+
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
-@keyframes shake {
+@-webkit-keyframes shake {
   0%,
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 
   10%,
@@ -1650,14 +1676,41 @@ textarea:focus::placeholder {
   50%,
   70%,
   90% {
-    transform: translateX(-10px);
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
   }
 
   20%,
   40%,
   60%,
   80% {
-    transform: translateX(10px);
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
 }
 
@@ -1703,11 +1756,14 @@ textarea:focus::placeholder {
 .feedback-show {
 	display: block;
 
-	animation: open 0.6s;
+	-webkit-animation: open 0.6s;
+
+	        animation: open 0.6s;
 }
 
 .feedback-error {
-	animation: shake 0.6s;
+	-webkit-animation: shake 0.6s;
+	        animation: shake 0.6s;
 }
 
 .popup input[type="text"] {
@@ -1885,7 +1941,8 @@ textarea:focus::placeholder {
 }
 
 .filters-form select {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	height: 36px;
 	width: 193px;
 	border: 0;
@@ -2021,8 +2078,8 @@ textarea:focus::placeholder {
 	background-repeat: no-repeat;
 	background-position: 2px center;
 	background-size: 81%;
-	width: 27px;
-	height: 27px;
+	width: 28px;
+	height: 28px;
 	top: -5px;
 	left: 15px;
 	opacity: 0.8;
