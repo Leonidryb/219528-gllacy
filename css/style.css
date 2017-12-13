@@ -558,7 +558,7 @@ textarea:focus::placeholder {
 	visibility: hidden;
 }
 
-.user-basket-full:hover .basket {
+.user-basket-full:hover .basket-wrapper {
 	visibility: visible;
 }
 
@@ -644,7 +644,7 @@ textarea:focus::placeholder {
 	left: -423px;
 	z-index: 1000;
 
-	padding-top: 10px;
+	padding-top: 11px;
 	visibility: hidden;
 
 }
