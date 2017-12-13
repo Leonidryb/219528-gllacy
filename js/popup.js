@@ -2,6 +2,8 @@ var link = document.querySelector(".feedback-link");
   
 var popup = document.querySelector(".feedback");
 
+var blackout = document.querySelector(".popup-blackout");
+
 var close = popup.querySelector(".modal-close");
 
 var form = popup.querySelector("form")
@@ -13,6 +15,7 @@ var mailValid = popup.querySelector(".feedback-mail");
   
 link.addEventListener("click", function (evt) {
     evt.preventDefault();
+    blackout.classList.add("popup-blackout-show");
     popup.classList.add("feedback-show");
     nameFocus.focus();
   });
@@ -21,6 +24,7 @@ close.addEventListener("click", function (evt) {
     evt.preventDefault();
     popup.classList.remove("feedback-show");
     popup.classList.remove("feedback-error");
+    blackout.classList.remove("popup-blackout-show");
   });
 
 form.addEventListener("submit", function (evt) {
@@ -36,6 +40,7 @@ form.addEventListener("submit", function (evt) {
       if (popup.classList.contains("feedback-show")) {
         popup.classList.remove("feedback-show");
         popup.classList.remove("feedback-error");
+        blackout.classList.remove("popup-blackout-show");
       }
     }
   });
